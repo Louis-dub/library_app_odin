@@ -49,6 +49,7 @@ header {
     padding: 1.5rem;
     border-left: 3px solid var(--focus);
     box-shadow: 0 4px 15px #0000004d;
+    position: relative;
 }
 
 .title {
@@ -71,6 +72,19 @@ header {
 
 .book[data-read="false"] .read-status {
     color: #c97a4c;
+}
+
+.btn-remove {
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: var(--secondary-text);
+}
+
+.btn-remove:hover {
+    color: #c97a4c
 }
 
 .btn-add, button[type="submit"] {

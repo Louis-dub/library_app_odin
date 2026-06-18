@@ -22,6 +22,7 @@ class Book {
                 <p>Author: ${this.author}</p>
                 <p>${this.page} pages</p>
                 <p class="read-status">${this.read == true ? "Already read" : "Not read yet"}</p>
+                <button class="btn-remove" data-id="${this.id}">Remove</button>
             </div>
         `
     }
@@ -37,8 +38,16 @@ function createFirstBook(title, author, page, read) {
     books.push(book);
 }
 
+function displayBooks() {
+    booksList.innerHTML = '';
+    books.forEach(book => {
+        booksList.innerHTML += book.createBook();
+    })
+}
+
 createFirstBook("The Hobbit", "J.R.R. Tolkien", 295, false);
 createFirstBook("Harry Potter and the Philosopher's Stone", "J.K. Rowling", 305, true);
+displayBooks();
 
 btnAdd.addEventListener("click", () => {
     dialog.showModal();
@@ -46,16 +55,25 @@ btnAdd.addEventListener("click", () => {
 
 closeBtn.addEventListener("click", () => {
     dialog.close();
-})
+});
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const book = new Book();
 
     books.push(book);
-    booksList.innerHTML = '';
-    books.forEach(book => {
-        booksList.innerHTML += book.createBook();
-    })
+    displayBooks();
     dialog.close();
-})
+});
+
+booksList.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn-remove");
+
+    if (!btn)
+        return;
+    const book = books.find(b => btn.dataset.id === b.id);
+    const index = books.indexOf(book);
+
+    books.splice(index, 1);
+    displayBooks();
+});
