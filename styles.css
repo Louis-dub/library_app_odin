@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@400;500&display=swap');
+
+:root {
+    --background: #1a1a2e;
+    --background-card: #16213e;
+    --focus: #c9a84c;
+    --main-text: #e0d5c1;
+    --secondary-text: #9e8f75;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--background);
+    color: var(--main-text);
+}
+
+h1, h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--focus);
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--focus);
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.book {
+    background-color: var(--background-card);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-left: 3px solid var(--focus);
+    box-shadow: 0 4px 15px #0000004d;
+}
+
+.title {
+    margin-bottom: 15px;
+}
+
+.book p {
+    color: var(--secondary-text);
+    margin-top: 5px;
+}
+
+.read-status {
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.book[data-read="true"] .read-status {
+    color: #6dbf8a;
+}
+
+.book[data-read="false"] .read-status {
+    color: #c97a4c;
+}
+
+.btn-add, button[type="submit"] {
+    border: none;
+    cursor: pointer;
+    background-color: var(--focus);
+    color: var(--background);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+.btn-add:hover, button[type="submit"]:hover {
+    opacity: 0.85;
+}
+
+dialog {
+    background-color: var(--background-card);
+    color: var(--main-text);
+    border-radius: 10px;
+    border: 3px solid var(--focus);
+    padding: 2rem;
+    width: 400px;
+    border: none;
+    outline: none;
+    box-shadow: 0 8px 32px #00000099;
+}
+
+dialog::backdrop {
+    background-color: #000000b3;
+}
+
+.form-add {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+input {
+    background-color: var(--background);
+    color: var(--main-text);
+    border: 1px solid var(--secondary-text);
+    border-radius: 4px;
+    padding: 0.5rem;
+    outline: none;
+    border-color: var(--focus);
+}
+
+.close {
+    border: none;
+    cursor: pointer;
+    color: var(--secondary-text);
+    display: block;
+    margin-left: auto;
+    width: 1.2rem;
+}
+
+.close {
+    columns: var(--focus);
+}
