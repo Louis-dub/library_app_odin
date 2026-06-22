@@ -1,23 +1,23 @@
 # Library App - The Odin Project
-Ce projet entre dans le cadre de la formation du site [The Odin Project](https://www.theodinproject.com).
-Il s'agit d'une librairie digitale.
+This project is part of the [The Odin Project](https://www.theodinproject.com) curriculum.
+It is a digital library app.
 
-## Aperçu
-Vous pouvez accéder au jeu [ici](https://louis-dub.github.io/library_app_odin/).
+## Preview
+You can access the app [here](https://louis-dub.github.io/library_app_odin/).
 
-![Apercu](assets/screenshot.png)
+![Preview](assets/screenshot.png)
 
-## Fonctionnalités
-Sur cette app, vous pouvez:
-- Ajouter des livres
-- Supprimer des livres
+## Features
+With this app, you can:
+- Add books
+- Remove books
 
-## Technologies utilisées
-- **HTML5**: Pour la structure sémantique du jeu
-- **CSS3**: Pour le style personnalisé
-- **JavaScript**: Pour la récupération des informations, ajouter des livres, supprimers des livres
+## Technologies Used
+- **HTML5**: For the semantic structure of the app
+- **CSS3**: For custom styling
+- **JavaScript**: For retrieving information, adding books, and removing books
 
-## Ce que j'ai appris
-- Manipulation d'objet JavaScript
-- Manipulation du DOM en JavaScript
-- Récupération des informations d'un formulaire en JavaScript
+## What I Learned
+- JavaScript object manipulation
+- DOM manipulation in JavaScript
+- Retrieving form data in JavaScript
